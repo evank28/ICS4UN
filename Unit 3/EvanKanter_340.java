@@ -1,7 +1,7 @@
-//file EvanKanter_332.java
+//file EvanKanter_340.java
 // Merge sort problem
 import java.util.*;
-public class EvanKanter_332 {
+public class EvanKanter_340 {
 
 	public static void main(String[] args)
 	{	
@@ -15,58 +15,49 @@ public class EvanKanter_332 {
 		print1DPartial(list, 10, list.length-10, list.length-1); //prints last 10 elements of array
 		//System.out.println(Arrays.toString(list));
 		System.out.println("    ___________________________________________________________________");
-		mergeSort (list, 0, list.length-1);
+		quickSort (list, 0, list.length-1);
 		//System.out.println(Arrays.toString(list));
 		print1DPartial(list, 10, 0, 9); //prints first 10 elements of array
 		print1DPartial(list, 10, list.length-10, list.length-1); //prints last 10 elements of array
 	}
 	
-	public static void mergeSort (int[]data, int from, int to)
+	/* Quick Sort
+	 * 
+	 * Choose a pivot in a sequence. All elements to the right of pivot are greater than the pivot value
+	 * All elements to the left are less than the pivot value
+	 * Find a new pivot within each segment and partition on that point.
+	 * Repeat.
+	 */
+	public static void quickSort (int[]data, int from, int to)
 	{
 		if (from<to)
 		{
-			mergeSort (data, from, (from+to)/2);    //sort the left half
-			mergeSort (data, (from+to)/2+1, to);	//sort the right half
-			merge (data, from, to);
+			int pivot = partition (data, from, to);
+			quickSort(data, from, pivot-1); //sort the left half
+			quickSort(data, pivot+1, to); //sort the right half
 			
-		} 
+		}
 	}
 
-	public static void merge (int[]data, int from, int to)
+	public static int partition (int[]data, int from, int to)
 	{
-		int [] aux = new int[to-from+1];
-		for (int i = 0; i < aux.length; i++)
+		int pivot = to;
+		int runner = from; // element running from the left
+		while (runner < pivot)
 		{
-			aux[i] = data[from + i];
-		}
-		
-		int ia = 0;
-		int ib = (aux.length+1) / 2;
-		int id = from;
-		
-		while (ia < (aux.length+1)/2 && ib <aux.length)
-		{
-			if (aux[ia] < aux[ib])
+			if (data[runner]<data[pivot])
 			{
-				data[id] = aux[ia] ;
-				ia++ ;
+				runner++;
 			}
 			else
 			{
-				data[id] = aux[ib] ;
-				ib++ ;
+				swap (data, runner, pivot-1);
+				swap (data, pivot-1, pivot);
+				pivot --;
 			}
-			id++ ;
 		}
 		
-		while (ia  < (aux.length+1)/2)
-		{
-			data[id] = aux[ia] ;
-			ia++ ;
-			id++ ;
-		}
-		
-		
+		return pivot;
 	}
 	
 	//Prints a part of a 1-D array
@@ -99,6 +90,14 @@ public class EvanKanter_332 {
 			//System.out.print("\n") ; // separate from next output
 	}
 	
+	
+	//Saved swap method
+	public static void swap (int[] list, int a, int b)
+	{
+		int temp = list[a] ;
+		list[a] = list [b] ; 
+		list [b] = temp ; 
+	}
 
 	
 }

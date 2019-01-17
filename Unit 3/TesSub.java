@@ -5,6 +5,6 @@ public class TesSub {
 	{	
 	String str = "alpa";
 	String b = str.substring(0,0);
-	System.out.println(b+"test");
+	System.out.println(b);
 }
 }
