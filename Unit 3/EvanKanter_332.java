@@ -15,7 +15,8 @@ public class EvanKanter_332 {
 		print1DPartial(list, 10, list.length-10, list.length-1); //prints last 10 elements of array
 		//System.out.println(Arrays.toString(list));
 		System.out.println("    ___________________________________________________________________");
-		mergeSort (list, 0, list.length-1);
+		//mergeSort (list, 0, list.length-1);
+		mergeSort_iter (list, 0, list.length-1);
 		//System.out.println(Arrays.toString(list));
 		print1DPartial(list, 10, 0, 9); //prints first 10 elements of array
 		print1DPartial(list, 10, list.length-10, list.length-1); //prints last 10 elements of array
@@ -31,11 +32,22 @@ public class EvanKanter_332 {
 			
 		} 
 	}
+	
+	public static void mergeSort_iter (int[]data, int from, int to)
+	{
+		for (int groupSize = 1; groupSize <= data.length/2+1; groupSize = groupSize * 2)
+		{
+			for (int i = 0; i < data.length; i = i + groupSize)
+			{
+				merge(data, i, i+groupSize) ;
+			}
+		}
+	}
 
 	public static void merge (int[]data, int from, int to)
 	{
 		int [] aux = new int[to-from+1];
-		for (int i = 0; i < aux.length; i++)
+		for (int i = 0; i < aux.length ; i++)
 		{
 			aux[i] = data[from + i];
 		}
