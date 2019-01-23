@@ -5,7 +5,7 @@ public class EvanKanter_332 {
 
 	public static void main(String[] args)
 	{	
-		int size = 100;
+		int size = 10;
 		int[] list = new int [size];
 		for (int i = 0; i < list.length; i++)
 		{
@@ -35,11 +35,12 @@ public class EvanKanter_332 {
 	
 	public static void mergeSort_iter (int[]data, int from, int to)
 	{
-		for (int groupSize = 1; groupSize <= data.length/2+1; groupSize = groupSize * 2)
+		for (int groupSize = 1; groupSize <= data.length-1; groupSize = groupSize * 2)
 		{
-			for (int i = 0; i < data.length; i = i + groupSize)
+			for (int i = 0; i < data.length-1; i = i + groupSize + 1)
 			{
-				merge(data, i, i+groupSize) ;
+				merge(data, i, Math.min(i+groupSize,data.length-1)) ;
+				System.out.println("GroupSize: " + groupSize + " from: " + i +" to: "+ (i+groupSize) + " array " + Arrays.toString(data));
 			}
 		}
 	}
