@@ -1,0 +1,19 @@
+It was not easy to setup gitHub with vsCode.
+
+This is what ended up working:
+- I had my java environment working in vsCode
+- I created a folder
+- using the Git bash inside vsCode:
+    -  I setup my git user name and identity
+    - I cloned a repository
+- vsCode automatically adds the parent folder for the cloned repo to the workspace
+    - So I removed the parent folder from the workspace
+    - I then setup the child folder -- the cloned rep (which contains the .git folder inside) -- as the workspace folder (Add to workspace)
+- I now can commit and push to upstream.
+- I should be able to sync too - git.autofetch setting set to true
+- I save my password for github as per: https://help.github.com/articles/caching-your-github-password-in-git/
+
+Mission accomplished!
+
+Evan Kanter
+2019-02-10
