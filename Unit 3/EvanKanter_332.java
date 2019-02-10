@@ -5,21 +5,25 @@ public class EvanKanter_332 {
 
 	public static void main(String[] args)
 	{	
-		int size = 10;
+		/*int size = 100;
 		int[] list = new int [size];
 		for (int i = 0; i < list.length; i++)
 		{
 			list[i] = (int)(Math.random()*size);
-		}
-		print1DPartial(list, 10, 0, 9); //prints first 10 elements of array
-		print1DPartial(list, 10, list.length-10, list.length-1); //prints last 10 elements of array
+		}*/
+		
+		//print1DPartial(list, 10, 0, 9); //prints first 10 elements of array
+		//print1DPartial(list, 10, list.length-10, list.length-1); //prints last 10 elements of array
 		//System.out.println(Arrays.toString(list));
-		System.out.println("    ___________________________________________________________________");
-		//mergeSort (list, 0, list.length-1);
-		mergeSort_iter (list, 0, list.length-1);
+		//System.out.println("    ___________________________________________________________________");
+	//	mergeSort (list, 0, list.length-1);
 		//System.out.println(Arrays.toString(list));
-		print1DPartial(list, 10, 0, 9); //prints first 10 elements of array
-		print1DPartial(list, 10, list.length-10, list.length-1); //prints last 10 elements of array
+		//print1DPartial(list, 10, 0, 9); //prints first 10 elements of array
+		//print1DPartial(list, 10, list.length-10, list.length-1); //prints last 10 elements of array
+		int[] list  = new int[] {7,5,2,9,6,1,8,0,4,3,5,2};
+		print1D(list,12);
+		mergeSort(list, 0, list.length-1);
+		print1D(list,12);
 	}
 	
 	public static void mergeSort (int[]data, int from, int to)
@@ -29,26 +33,15 @@ public class EvanKanter_332 {
 			mergeSort (data, from, (from+to)/2);    //sort the left half
 			mergeSort (data, (from+to)/2+1, to);	//sort the right half
 			merge (data, from, to);
+			print1D(data,12);
 			
 		} 
-	}
-	
-	public static void mergeSort_iter (int[]data, int from, int to)
-	{
-		for (int groupSize = 1; groupSize <= data.length-1; groupSize = groupSize * 2)
-		{
-			for (int i = 0; i < data.length-1; i = i + groupSize + 1)
-			{
-				merge(data, i, Math.min(i+groupSize,data.length-1)) ;
-				System.out.println("GroupSize: " + groupSize + " from: " + i +" to: "+ (i+groupSize) + " array " + Arrays.toString(data));
-			}
-		}
 	}
 
 	public static void merge (int[]data, int from, int to)
 	{
 		int [] aux = new int[to-from+1];
-		for (int i = 0; i < aux.length ; i++)
+		for (int i = 0; i < aux.length; i++)
 		{
 			aux[i] = data[from + i];
 		}

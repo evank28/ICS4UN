@@ -60,6 +60,27 @@ public class EvanKanter_340 {
 		return pivot;
 	}
 	
+
+	public static int partitionFrom (int[]data, int from, int to)
+	{
+		int pivot = from;
+		int runner = to; // element running from the right
+		while (runner > pivot)
+		{
+			if (data[runner]>data[pivot])
+			{
+				runner--;
+			}
+			else
+			{
+				swap (data, runner, pivot+1);
+				swap (data, pivot+1, pivot);
+				pivot ++;
+			}
+		}
+		
+		return pivot;
+	}
 	//Prints a part of a 1-D array
 	public static void print1DPartial (int[] data, int cols, int from, int to)
 	{
