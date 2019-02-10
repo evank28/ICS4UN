@@ -1,6 +1,5 @@
 //file EvanKanter_332.java
 // Merge sort problem
-import java.util.*;
 public class EvanKanter_332 {
 
 	public static void main(String[] args)

@@ -1,6 +1,6 @@
 //file EvanKanter_322.java
 //
-import java.util.*;
+
 public class EvanKanter_322 {
 
 	public static void main(String[] args)
