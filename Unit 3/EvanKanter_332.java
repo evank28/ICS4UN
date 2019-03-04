@@ -32,7 +32,7 @@ public class EvanKanter_332 {
 			mergeSort (data, from, (from+to)/2);    //sort the left half
 			mergeSort (data, (from+to)/2+1, to);	//sort the right half
 			merge (data, from, to);
-			print1D(data,12);
+			//print1D(data,12);
 			
 		} 
 	}

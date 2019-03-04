@@ -5,3 +5,14 @@ public class EvanKanter_410
         
     }
 }
+
+
+class BankAccount {
+    private double balance;
+    
+    public double getBalance() //called with: c.getBalance();
+    {
+        return(balance);
+    }
+    
+}
