@@ -23,7 +23,7 @@ public class EvanKanter_411_Circle
     }
 }
 
-
+/*
 class Circle {
     private double radius;
     private double pi = Math.PI;
@@ -69,5 +69,5 @@ class Circle {
         }
         return circumference;
     }
-        
-}
+       
+}*/ 

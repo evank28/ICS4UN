@@ -1,6 +1,6 @@
-// Creates the Circle class as per instructions
+    //Modified from 422
 import java.util.*;
-public class EvanKanter_422_Rectangle
+public class EvanKanter_432_Rectangle
 {
     public static void main (String[] args)
     {
@@ -9,7 +9,9 @@ public class EvanKanter_422_Rectangle
        box.setLength(20);
        box.setWidth(10);
        System.out.println("Length: <<"+box.getLength()+">> Width: <<"+box.getWidth()+">> Area: <<" +box.getArea()+">> Perim: <<"+box.getPerimeter()+">>");
+       Rectangle.displayAreaFormula();
     }
+
 }
 
 class Rectangle
@@ -53,8 +55,11 @@ class Rectangle
 
     public double getArea()
     {
-        return width*length;
+        return width * length;
     } 
 
+    public static void displayAreaFormula (){
+        System.out.println("A = length * width");
+    }
 
  }   
