@@ -1,4 +1,4 @@
-//file EvanKanter_319.java
+//file EvanKanter_321.java
 public class EvanKanter_321 {
 
 	public static void main(String[] args)
@@ -16,13 +16,13 @@ public class EvanKanter_321 {
 			return (x * power(x, n-1));
 				
 	}
-
+/*
 	public static double quickPower (double x, long n, long cur)
 	{
 		if (n==1)
 			return x;
-		if (n==3):
-			return 
+		if (n==3)
+			return 1.0;
 		return quickPower(x * x, n/2);
-	}
-}
+	}*/
+} 
