@@ -14,5 +14,7 @@
 			"**/desktop.ini": true
 		},
 		"java.dependency.packagePresentation": "hierarchical",
-		"maven.view": "hierarchical"}
+		"maven.view": "hierarchical",
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
 }
