@@ -6,21 +6,21 @@ public class EvanKanter_A42_mySavings
     {
         System.out.println("Please initialize the piggy bank. Enter the starting balance: ") ;
         Scanner initial = new Scanner (System.in) ;
-        piggyBank myBank = new piggyBank(initial.nextDouble()) ;
+        PiggyBank myBank = new PiggyBank(initial.nextDouble()) ;
         //initial.close();
         myBank.initalize();
     }
 }
 
-class piggyBank
+class PiggyBank
 {
     private double balance = 0.0 ;      //initialize balance
 
-    public piggyBank ()                  //no param constructor
+    public PiggyBank ()                  //no param constructor
     {
     }
 
-    public piggyBank (double balance)    //param constructor to initialize class with a set balance
+    public PiggyBank (double balance)    //param constructor to initialize class with a set balance
     {
         this.balance = balance ; 
     }

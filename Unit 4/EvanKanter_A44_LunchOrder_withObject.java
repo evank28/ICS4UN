@@ -5,13 +5,13 @@ public class EvanKanter_A44_LunchOrder_withObject
     public static void main (String[] args)
     {
         //This implemetation uses the food class to generate menu items, as dicussed by email
-
-        food[] menu = new food[] {new food ("hamburgers", 1.85, 9.0, 33.0, 1.0), new food ("salad", 2.0, 1.0, 11.0, 5.0), new food ("fries", 1.3, 11.0, 36.0, 4.0), new food ("soda", 0.95, 0.0, 38.0, 0.0)} ;
+        //The following Array of Food items stores the menu
+        Food[] menu = new Food[] {new Food ("hamburgers", 1.85, 9.0, 33.0, 1.0), new Food ("salad", 2.0, 1.0, 11.0, 5.0), new Food ("fries", 1.3, 11.0, 36.0, 4.0), new Food ("soda", 0.95, 0.0, 38.0, 0.0)} ;
 
         double total = 0.0 ;
         Scanner stdin = new Scanner (System.in) ;
         
-        for (int i = 0; i<menu.length; i++)   //prompts the user for quantity of each food and adds the unit cost * the quantity entered to the total
+        for (int i = 0; i<menu.length; i++)     //prompts the user for quantity of each food item in the menu and adds the unit cost * the quantity entered to the total
         {   
             System.out.print("Enter number of servings of " + menu[i].name + ": ") ;
             total += stdin.nextInt() * menu[i].cost ;
@@ -22,12 +22,12 @@ public class EvanKanter_A44_LunchOrder_withObject
     }
 }
 
-class food 
+class Food 
 {
-     public double cost, carbs, fiber, fat ;                     //stores the unit costs of the 4 foods
-     public String name ;                       //stores the names of all the foods
+     public double cost, carbs, fiber, fat ;                     //initalize variable to store the properties of food item
+     public String name ;                                         //initalize variable for the name of the food item
    
-    public food (String name, double cost, double fat, double carbs, double fiber)      //constructor
+    public Food (String name, double cost, double fat, double carbs, double fiber)      //constructor
     {
         this.name = name ;
         this.cost = cost ;

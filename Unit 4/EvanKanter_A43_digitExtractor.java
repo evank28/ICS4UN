@@ -6,18 +6,18 @@ public class EvanKanter_A43_digitExtractor
     {
         Scanner initial = new Scanner (System.in) ;
         System.out.print("Enter an integer: ") ;
-        num myNum = new num(initial.nextInt()) ;
+        Num myNum = new Num(initial.nextInt()) ;
         //initial.close();
         myNum.initalize();
     }
 }
 
-class num
+class Num
 {
     private int whole = 0 ;      //declare integer whole at 0
     private String wholeString = "0";     //declare a String representation of the whole integer entered
 
-    public num (int whole)    //param constructor to initialize class with the whole integer entered by the user
+    public Num (int whole)    //param constructor to initialize class with the whole integer entered by the user
     {
         this.whole = whole ; 
         this.wholeString = ""+ this.whole ;

@@ -7,6 +7,7 @@ public class EvanKanter_A41_DreamVacation
         Scanner input = new Scanner (System.in) ;
         System.out.println("Please enter the Name followed by the Cost of your Dream Vacation.") ;
         DreamVacation myVacay = new DreamVacation (input.next(), input.nextDouble()) ;
+        myVacay.getName() ;
     }
 }
 
