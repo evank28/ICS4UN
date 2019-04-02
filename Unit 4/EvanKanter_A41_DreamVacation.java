@@ -7,7 +7,7 @@ public class EvanKanter_A41_DreamVacation
         Scanner input = new Scanner (System.in) ;
         System.out.println("Please enter the Name followed by the Cost of your Dream Vacation.") ;
         DreamVacation myVacay = new DreamVacation (input.next(), input.nextDouble()) ;
-        myVacay.getName() ;
+        System.out.println(myVacay.getName()) ;
     }
 }
 
@@ -23,6 +23,8 @@ class DreamVacation
     {
         this.name = name ;
         this.cost = cost ;
+        //this.setName(name);       //Interestingly, this would compile and run!
+        //this.setCost(cost);
     }
 
     public String getName()

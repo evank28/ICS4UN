@@ -5,9 +5,9 @@ public class EvanKanter_A44_LunchOrder_withObject
     public static void main (String[] args)
     {
         //This implemetation uses the food class to generate menu items, as dicussed by email
-        //The following Array of Food items stores the menu
+        //The following Array of Food objects stores the menu
         Food[] menu = new Food[] {new Food ("hamburgers", 1.85, 9.0, 33.0, 1.0), new Food ("salad", 2.0, 1.0, 11.0, 5.0), new Food ("fries", 1.3, 11.0, 36.0, 4.0), new Food ("soda", 0.95, 0.0, 38.0, 0.0)} ;
-
+        
         double total = 0.0 ;
         Scanner stdin = new Scanner (System.in) ;
         
