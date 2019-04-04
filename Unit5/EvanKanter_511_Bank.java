@@ -26,7 +26,7 @@ public class EvanKanter_511_Bank {
 		System.out.print("City & Province: ");
 		decmAccount.changeAddress(street, input.next(), input.next());
 		System.out.print(decmAccount);
-		//input.close();
+		input.close();
 	}
 }
 

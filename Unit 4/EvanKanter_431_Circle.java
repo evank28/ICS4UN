@@ -52,7 +52,7 @@ class Circle {
     public double area ()
     {
         if (lastARadius != radius)
-        {   System.out.println("Performing A calculation");
+        {   //System.out.println("Performing A calculation");
             area = pi * radius * radius;
             lastARadius = radius;
         }
@@ -68,7 +68,7 @@ class Circle {
     {
         if (lastCRadius != radius)
         {   
-            System.out.println("Performing C calculation");
+            //System.out.println("Performing C calculation");
             circumference = 2 * pi * radius ;
                      lastCRadius = radius;
         }
