@@ -18,6 +18,7 @@
             "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
+            "console": "internalConsole",
             "mainClass": "${file}"
         },
   

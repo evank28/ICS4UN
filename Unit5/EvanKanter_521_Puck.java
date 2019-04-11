@@ -1,4 +1,4 @@
-//this bank class is constantly updated as a lesson example from the teacher
+//Extends previously built Circle class (431) to use it to create 3D Disk class, and then extend Disk to create Puck
 import java.util.Scanner;
 import Circle;
 
