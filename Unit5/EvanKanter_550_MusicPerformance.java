@@ -29,9 +29,9 @@ public class EvanKanter_550_MusicPerformance {
 					
 					default:
 						bandMember = new Drum(name);
-						break;
-					
+						break;			
 				}
+				break;
 			
 			case ("w"):
 				System.out.println("(P)icollo or (C)larinet?");
@@ -45,9 +45,11 @@ public class EvanKanter_550_MusicPerformance {
 						bandMember = new Clarinet(name);
 						break;	
 				}
+				break;
 			
 			default:
 				bandMember = new Clarinet(name);
+				break;
 			
 		}
 			

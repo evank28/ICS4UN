@@ -1,6 +1,7 @@
     //Modified from 422
+    //Modified from 432
 import java.util.*;
-public class EvanKanter_432_Rectangle
+public class EvanKanter_462_Rectangle
 {
     public static void main (String[] args)
     {
@@ -10,11 +11,16 @@ public class EvanKanter_432_Rectangle
        box.setWidth(10);
        System.out.println("Length: <<"+box.getLength()+">> Width: <<"+box.getWidth()+">> Area: <<" +box.getArea()+">> Perim: <<"+box.getPerimeter()+">>");
        Rectangle.displayAreaFormula();
+       Rectangle box2 = new Rectangle (20,6);
+       System.out.println("box > box2 ? ---> "+box.compareTo(box2));
+
     }
 
 }
-
-class Rectangle
+public interface Comparable{
+    int compareTo(Object obj);
+}
+class Rectangle implements Comparable
  {
     private double length, width ;
                                                            
@@ -60,6 +66,16 @@ class Rectangle
 
     public static void displayAreaFormula (){
         System.out.println("A = length * width");
+    }
+
+    public int compareTo(Rectangle toCompare){
+
+	if (this.getLength() == toCompare.getLength() && this.getWidth() == toCompare.getWidth()){
+		return 1;
+	}
+	else{
+		return 0;
+	}
     }
 
  }   
