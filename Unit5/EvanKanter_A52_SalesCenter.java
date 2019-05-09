@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class EvanKanter_A52_SalesCenter
 {
  public static void main (String[] args){
-     Employee[] employeeDB = {new Manager("Diego", "Martin", 55000.00 ), new Associate("Kylie", "Walter", 18.50), new Associate("Michael", "Rose", 16.75)};
-    Scanner stdin = new Scanner (System.in);
+    Employee[] employeeDB = {new Manager("Diego", "Martin", 55000.00 ), new Associate("Kylie", "Walter", 18.50), new Associate("Michael", "Rose", 16.75)};
+    while (true){
+        Scanner stdin = new Scanner (System.in);
     System.out.print("Select one of the options: \n(E)mployee Information\n(P)ay\n(Q)uit\nEnter your choice: ");
     String choice1 = stdin.next().toLowerCase();
     if (choice1.equals("q")){
@@ -27,7 +28,8 @@ public class EvanKanter_A52_SalesCenter
     else{
         System.out.println(selection);
     }
-
+    }
+    
     }
 }
 
