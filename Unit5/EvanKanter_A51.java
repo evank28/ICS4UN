@@ -31,7 +31,7 @@ class Point3D extends Point{
     private int z;
     public Point3D(int x, int y, int z) {
         super(x, y);
-        z = this.z;
+        this.z = z;
     }
 
     public int getZ() {
