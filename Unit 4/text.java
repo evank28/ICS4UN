@@ -1,8 +1,10 @@
+import java.util.Scanner;
 public class text
 {
  public static void main (String[] args)
  {
-    System.out.println(1) ;
+    Scanner stdin = new Scanner(System.in);
+    System.out.println(stdin.nextInt());
  }
 }
 
