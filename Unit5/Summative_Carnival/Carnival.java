@@ -156,7 +156,7 @@ class CoinFlip extends GameBooth{
      * Prints the instructions for the CoinFlip game, using the prizes used when initializing the instance of the game booth.
      */
     public void printInstructions(){
-        System.out.println("INSTRUCTIONS: You will be allowed to flip a two sided coin up to 2 times. Each time, to win a prize you will have to correctly guess which side will be up when the coin lands. If you guess correctly the first time, you will be allowed to either walk away with " + this.getSmallPrize() + "or guess again for the chance to win " + this.getLargePrize() + " (at the risk of losing the prize you initially won). \n");
+        System.out.println("INSTRUCTIONS: You will be allowed to flip a two sided coin up to 2 times. Each time, to win a prize you will have to correctly guess which side will be up when the coin lands. If you guess correctly the first time, you will be allowed to either walk away with " + this.getSmallPrize() + " or guess again for the chance to win " + this.getLargePrize() + " (at the risk of losing the prize you initially won). \n");
     }
     /**
      * Start method for CoinFlip game
